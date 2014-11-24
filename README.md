@@ -11,4 +11,4 @@ TODO:
 《Reservoir Sample - 蓄水池抽样》 http://www.cnblogs.com/HappyAngel/archive/2011/02/07/1949762.html  
 
 Blog:  
-《结构之法 算法之道》 http://blog.csdn.net/v\_july\_v  
+《结构之法 算法之道》 http://blog.csdn.net/v_july_v  
