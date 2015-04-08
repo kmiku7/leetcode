@@ -1,5 +1,5 @@
 #include <iostream>
-#include "solution.h"
+#include "solution_2.h"
 
 using namespace std;
 
