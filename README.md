@@ -12,3 +12,12 @@ TODO:
 
 Blog:  
 《结构之法 算法之道》 http://blog.csdn.net/v_july_v  
+
+Something about bit op:  
+http://stackoverflow.com/questions/746171/best-algorithm-for-bit-reversal-from-msb-lsb-to-lsb-msb-in-c  
+https://graphics.stanford.edu/~seander/bithacks.html  
+
+
+Something about array rotate:  
+http://www.geeksforgeeks.org/array-rotation/  
+
