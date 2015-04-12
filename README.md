@@ -23,3 +23,11 @@ http://www.geeksforgeeks.org/array-rotation/
 A Linear Time Majority Vote Algorithm  
 http://www.cs.utexas.edu/~moore/best-ideas/mjrty/  
 
+
+题解：  
+http://blog.csdn.net/linhuanmars  
+
+
+Maximum Gap:  
+http://cgm.cs.mcgill.ca/~godfried/teaching/dm-reading-assignments/Maximum-Gap-Problem.pdf  
+
