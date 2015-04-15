@@ -37,6 +37,33 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+class Solution_a {
+public:
+    TreeNode *sortedListToBST(ListNode *head) {
+        if(!head) return NULL;
+        int list_len = 0;
+        ListNode* temp = head;
+        while(temp!=NULL) {
+            ++list_len;
+            temp = temp->next;
+        }
+        temp = head;
+        return build_tree(temp, 0, list_len);
+    }
+
+    TreeNode* build_tree(ListNode*& rem, int idx, int idx_ub) {
+        int left_child = idx*2 + 1;
+        TreeNode* root = new TreeNode(-idx);
+        if(left_child<idx_ub)
+            root->left = build_tree(rem, left_child, idx_ub);
+        root->val = rem->val;
+        rem = rem->next;
+        left_child+=1;
+        if(left_child<idx_ub)
+            root->right = build_tree(rem, left_child, idx_ub);
+        return root;
+    }
+};
 class Solution {
 public:
     TreeNode *sortedListToBST(ListNode *head) {
@@ -129,6 +156,14 @@ int main(int argc, char** argv) {
     print_tree_in(tree);
     cout << endl;
     print_tree_pre(tree);
+    cout << endl;
+
+    Solution_a sa;
+    TreeNode* treea = sa.sortedListToBST(root);
+
+    print_tree_in(treea);
+    cout << endl;
+    print_tree_pre(treea);
     cout << endl;
     return 0;
 }
