@@ -30,4 +30,12 @@ http://blog.csdn.net/linhuanmars
 
 Maximum Gap:  
 http://cgm.cs.mcgill.ca/~godfried/teaching/dm-reading-assignments/Maximum-Gap-Problem.pdf  
+  
+Something about largest-rectangle-in-histogram:  
+http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/  
+http://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/  
+http://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html  
+http://www.informatik.uni-ulm.de/acm/Locals/2003/html/histogram.html
+
+
 
