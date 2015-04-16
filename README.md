@@ -26,6 +26,7 @@ http://www.cs.utexas.edu/~moore/best-ideas/mjrty/
 
 题解：  
 http://blog.csdn.net/linhuanmars  
+https://www.gitbook.com/book/siddontang/leetcode-solution/details  
 
 
 Maximum Gap:  
@@ -38,4 +39,12 @@ http://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html
 http://www.informatik.uni-ulm.de/acm/Locals/2003/html/histogram.html
 
 
+最长递增子序列：  
+http://www.ahathinking.com/archives/117.html  
+
+
+最长公共自序列：  
+http://www.ahathinking.com/archives/115.html  
+http://www.felix021.com/blog/read.php?1587  
+http://www.ahathinking.com/archives/115.html  
 
