@@ -4,3 +4,5 @@
 a.out
 perf.data*
 core.*
+*.swo
+*.swp
