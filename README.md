@@ -48,3 +48,8 @@ http://www.ahathinking.com/archives/115.html
 http://www.felix021.com/blog/read.php?1587  
 http://www.ahathinking.com/archives/115.html  
 
+
+Something about: best time to buy and sell stack:  
+http://dananqi.blog.163.com/blog/static/23066615020141150043504/  
+http://dananqi.blog.163.com/blog/static/230666150201512210415137/
+
