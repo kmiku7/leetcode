@@ -53,3 +53,11 @@ Something about: best time to buy and sell stack:
 http://dananqi.blog.163.com/blog/static/23066615020141150043504/  
 http://dananqi.blog.163.com/blog/static/230666150201512210415137/
 
+
+单链表中的环，两个单链表的公共点。  
+http://www.cnblogs.com/hiddenfox/p/3408931.html  
+
+
+populating-next-right-pointers-in-each-node-ii:  
+二级指针代码虽然简洁优雅，但是对性能有影响，不如一级指针加if else判读。  
+
