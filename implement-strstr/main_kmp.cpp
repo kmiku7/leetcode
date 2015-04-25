@@ -6,30 +6,67 @@ using namespace std;
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        for(int i=0, ub=(int)haystack.size() - (int)needle.size();
-            i<=ub;
-            ++i) {
-            int j=0;
-            while(needle[j]==haystack[i+j] && j<needle.size()) ++j;
-            if(j==needle.size()) return i;
+        int needle_size = needle.size();
+        const char* needle_str = needle.c_str();
+        int backtrack[needle_size+1];
+        backtrack[0] = -1;
+
+        int pos_idx = 0;
+        int suffix_idx = -1;
+        while(pos_idx<needle_size-1) {
+            if(suffix_idx==-1 || needle_str[pos_idx] == needle_str[suffix_idx]) {
+                pos_idx += 1;
+                suffix_idx += 1;
+                if(needle_str[pos_idx] == needle_str[suffix_idx]) {
+                    backtrack[pos_idx] = backtrack[suffix_idx];
+                } else {
+                    backtrack[pos_idx] = suffix_idx;
+                }
+            } else {
+                suffix_idx = backtrack[suffix_idx];
+            }
         }
-        return -1;       
+        // print backtrack array
+        //for(int i=0; i<needle_size; ++i) {
+        //    cout << backtrack[i] << ", ";
+        //}
+        //cout << endl;
+
+        // find
+        pos_idx = -1;
+        int haystack_size = haystack.size();
+        const char* haystack_str = haystack.c_str();
+        int needle_pos = -1;
+        while(pos_idx < haystack_size && needle_pos < needle_size) {
+            //cout << "find: " << needle_pos << ", " << pos_idx << endl;
+            if(needle_pos == -1 || haystack_str[pos_idx] == needle_str[needle_pos]) {
+                pos_idx += 1;
+                needle_pos += 1;
+            } else {
+                needle_pos = backtrack[needle_pos];
+            }
+        }
+
+        return needle_pos == needle_size ? pos_idx - needle_size : -1;
     }
 };
 
 
 int main(int argc, char** argv) {
 
-    string a = "123456789";
-    string b = "345";
+    string a = "aaa";
+    string b = "aaa";
     string c = "abc";
     string d = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
 
+    string aa = "mississippi";
+    string bb = "issip";
+
     Solution s;
     cout << s.strStr(a, b) << endl;
-    cout << s.strStr(a, c) << endl;
-    cout << s.strStr(a, d) << endl;
-
+//    cout << s.strStr(a, c) << endl;
+//    cout << s.strStr(a, d) << endl;
+    cout << s.strStr(aa, bb) << endl;
 
     string paper = "As is the case in radio frequency transmission systems, multipath propagation \
 effects are important for wireless optical networks. The power launched from \

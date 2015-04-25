@@ -6,31 +6,46 @@ using namespace std;
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        for(int i=0, ub=(int)haystack.size() - (int)needle.size();
-            i<=ub;
-            ++i) {
-            int j=0;
-            while(needle[j]==haystack[i+j] && j<needle.size()) ++j;
-            if(j==needle.size()) return i;
+        int needle_size = needle.size();
+        const char* needle_str = needle.c_str();
+        int haystack_size = haystack.size();
+        const char* haystack_str = haystack.c_str();
+        unsigned short forward[256];
+        for(int i=0; i<256; ++i) forward[i]=needle_size+1;
+        for(int i=0; i<needle_size; ++i) forward[needle_str[i]] = needle_size-i;
+        int pos_idx = 0;
+        int ndl_idx = 0;
+        int hay_idx = pos_idx;
+        while(ndl_idx < needle_size) {
+            if(needle_str[ndl_idx] != haystack_str[hay_idx]) {
+                ndl_idx = 0;
+                hay_idx = pos_idx = pos_idx + forward[haystack_str[pos_idx+needle_size]];
+                if(pos_idx>haystack_size-needle_size) break;
+            } else {
+                ndl_idx += 1;
+                hay_idx += 1;
+            }
         }
-        return -1;       
+        return ndl_idx == needle_size ? pos_idx : -1;
     }
 };
 
 
 int main(int argc, char** argv) {
 
-    string a = "123456789";
-    string b = "345";
+    string a = "aaa";
+    string b = "aaa";
     string c = "abc";
     string d = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
 
+    string aa = "mississippi";
+    string bb = "a";
+
     Solution s;
-    cout << s.strStr(a, b) << endl;
-    cout << s.strStr(a, c) << endl;
-    cout << s.strStr(a, d) << endl;
-
-
+//    cout << s.strStr(a, b) << endl;
+//    cout << s.strStr(a, c) << endl;
+//    cout << s.strStr(a, d) << endl;
+    cout << s.strStr(aa, bb) << endl;
     string paper = "As is the case in radio frequency transmission systems, multipath propagation \
 effects are important for wireless optical networks. The power launched from \
 the transmitter may take many reflected and refracted paths before arriving at \
