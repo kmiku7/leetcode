@@ -59,5 +59,6 @@ http://www.cnblogs.com/hiddenfox/p/3408931.html
 
 
 populating-next-right-pointers-in-each-node-ii:  
-二级指针代码虽然简洁优雅，但是对性能有影响，不如一级指针加if else判读。  
+二级指针代码虽然简洁优雅，但是对性能有影响，不如一级指针加if else判断快。  
+
 
